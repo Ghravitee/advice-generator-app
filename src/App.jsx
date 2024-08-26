@@ -46,7 +46,7 @@ function App() {
           className="absolute -bottom-5 z-10 rounded-full bg-Neon-Green flex justify-center items-center p-3 hover:cursor-pointer hover:shadow-[0px_0px_30px_10px_rgba(82,255,168,0.3)] transition-shadow duration-300 ease-in-out"
           onClick={fetchAdvice}
         >
-          <img src={iconDice} width={20} height={20} />
+          <img src={iconDice} width={20} height={20} alt="this is an icon of a dice"/>
         </div>
       </div>
     </main>
