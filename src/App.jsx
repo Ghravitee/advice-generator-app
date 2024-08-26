@@ -4,8 +4,11 @@ import desktopPatternDivider from "./images/pattern-divider-desktop.svg";
 import iconDice from "./images/icon-dice.svg";
 
 function App() {
-  // Initialize state to store both advice text and its ID
-  const [advice, setAdvice] = useState({ text: "", id: "" });
+  // Initialize state with default advice text and ID
+  const [advice, setAdvice] = useState({
+    text: "It is easy to sit up and take notice, what's difficult is getting up and taking action.",
+    id: 117,
+  });
 
   const fetchAdvice = async () => {
     try {
@@ -24,10 +27,10 @@ function App() {
     <main className="flex items-center justify-center min-h-screen bg-Dark-Blue">
       <div className="max-w-[22rem] mx-auto relative bg-Dark-Grayish-Blue px-6 py-10 rounded-lg text-center flex flex-col gap-4 justify-center items-center">
         <h1 className="text-xs tracking-widest font-bold text-Neon-Green uppercase">
-          Advice <span className="">#{advice.id}</span>
+          Advice <span>#{advice.id}</span>
         </h1>
         <q className="text-Light-Cyan manrope-800 font-bold text-xl">
-          {advice.text || "Click the button to get advice!"}
+          {advice.text}
         </q>
         <img
           src={mobilePatternDivider}
